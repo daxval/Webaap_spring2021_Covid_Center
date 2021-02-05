@@ -187,15 +187,17 @@
               <legend>Part 3: Other Questions</legend>
               <label for="ddContact">
                 <p>
-                <span>Have you had contact within 6 feet for for greater than 15 minutes, or caring for someone who is diagnosed with COVID-19 in the last 14 dats and were not wearing proper personal protection?</span>
-                <label for="ddContact">
+                <span>Have you had contact within 6 feet for greater than 15 minutes, or caring for someone who is diagnosed with COVID-19 in the last 14 dats and were not wearing proper personal protection?</span>
+                <label for="rdContact">
                   <span>Contact:</span>
                   <strong><abbr title="required">*</abbr></strong>
                 </label>
-                <select id="ddContact" name="ddContact">
-                  <option value="No">No</option>
-                  <option value="Yes">Yes</option>
-                </select>
+                <input type="radio" id="rdContactYes" name="rdContact" value="contactYes">
+                <label for="rbMale">Yes</label>
+
+                <input type="radio" id="rdContactNo" name="rdcontact" value="contactNo">
+                <label for="rbMale">No</label>
+
                 </p>
               </label>
             </fieldset>
