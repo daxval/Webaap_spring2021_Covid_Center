@@ -199,9 +199,41 @@
 
                 <input type="radio" id="rdContactNo" name="rdcontact" value="contactNo">
                 <label for="rbMale">No</label>
-
                 </p>
               </label>
+              <label for="ddContact">
+                <p>
+                <span>Have you had contact within 6 feet for greater than 15 minutes, or caring for someone who is diagnosed with COVID-19 in the last 14 dats and were not wearing proper personal protection?</span>
+                </p>
+                <p>
+                <label for="rdContact">
+                  <span>Contact:</span>
+                  <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="radio" id="rdContactYes" name="rdContact" value="contactYes">
+                <label for="rbMale">Yes</label>
+
+                <input type="radio" id="rdContactNo" name="rdcontact" value="contactNo">
+                <label for="rbMale">No</label>
+                </p>
+              </label>
+              <fieldset>
+                <label for=""ddCountry>
+                <span>Have you traveled to another country in the past 14 days?</span>
+                <strong><abbr title="required">*</abbr></strong>
+                <br>
+              </label>
+              <select class="ddCountry" name="ddCountry">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+              <br>
+              <label for="txtCountry">
+                <span>Which contries? (seperate with commas)</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="text" name="txtCountry" name="txtCountry">
+              </fieldset>
             </fieldset>
           </form>
         </article>
