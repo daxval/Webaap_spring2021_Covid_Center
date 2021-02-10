@@ -228,10 +228,15 @@
                 <span>Which contries? (seperate with commas)</span>
                 <strong><abbr title="required">*</abbr></strong>
               </label>
-              <input type="text" name="txtCountry" name="txtCountry">
+              <input type="text" id="txtCountry" name="txtCountry">
               </fieldset>
               <button type="submit" name="SubmitButton">Submit</button>
               <button type="reset" name="ResetButton">Reset</button>
+              <label for="temp">
+                <span>Current temperature:</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="text" name="txtTemp" id="txtTemp" required pattern="[0-9]+[0-9]+\.[0-9]|[0-9]+[0-9]+\.[0-9][0-9][0-9]+[0-9]+\.[0-9]">
             </fieldset>
 
           </form>
