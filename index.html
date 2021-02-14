@@ -42,7 +42,7 @@
 
             <fieldset class="form-group">
               <div class="row">
-                <legend>Gender</legend>
+                <legend> Gender</legend>
                 <div class="col-sm-10">
                   <div class="form-check">
                     <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
@@ -59,12 +59,15 @@
                 </div>
             </fieldset>
 
-              </p>
-              <p>
-                <label for="txtTel">telephone:</label>
-                <strong><abbr title="required">*</abbr></strong>
-                <input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{10}">
-              </p>
+            <div class="row">
+              <label for="txtTel" class="col-sm-2 col-form-label">
+                telephone:
+              </label>
+              <div class="col-sm-10">
+                <input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{10}" class ="form-control">
+              </div>
+            </div>
+
               <p>
                 <label for="txtEmail">Email:</label>
                 <strong><abbr title="required">*</abbr></strong>
