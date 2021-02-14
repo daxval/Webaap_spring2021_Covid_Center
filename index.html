@@ -43,7 +43,7 @@
 
             <fieldset class="form-group">
               <div class="row">
-                <legend> Gender</legend>
+                <legend>-Gender</legend>
                 <div class="col-sm-10">
                   <div class="form-check">
                     <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
@@ -86,24 +86,27 @@
                 <input type="text" name="txtAddress" id="txtAddress" class-"form-control" placeholder="Street">
               </div>
               <div class="col">
-                <input type="text" name="txtCity" class"form-control" placeholder="City">
+                <input type="text" id="txtCity" name="txtCity" class"form-control" placeholder="City">
               </div>
               <div class="col">
-                <input type="text" name="txtState" class"form-control" placeholder="State">
+                <input type="text" id="txtCity" name="txtState" class"form-control" placeholder="State">
               </div>
               <div class="col">
-                <input type="text" name="txtZip" class"form-control" placeholder="Zip Code" pattern {0-9}[5]>
+                <input type="text" id="txtCity" name="txtZip" class"form-control" placeholder="Zip Code" pattern={0-9}[5]>
               </div>
             </div>
 
-            <p>
+            <div class="row form-group">
               <label for="txtDOB">
                 <span>Date of Birth</span>
                   <strong><abbr title="required">*</abbr></strong>
               </label>
               <input type="date" id="textDOB" name="txtDOB" required>
-            </p>
+            </div>
+
+
             </fieldset>
+
             <fieldset>
               <legend>Part 2: Potential Symptoms</legend>
               <h3>Please select yes if you are experiencing any of these symptoms</h3>
