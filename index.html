@@ -16,79 +16,77 @@
     </header>
       <section>
         <article>
-          <form>
-            <fieldset class="">
-              <legend class="w-auto">Part 1: Patient Information</legend>
-              <div class="alert alert-info">
-                <h5>Please give us some information about yourself</h5>
-              </div>
-
+          <form onsubmit="return validateForm()" id="mainForm">
+            <fieldset>
+              <center><legend class="w-auto">Part 1: Patient Information</legend></center>
+              <center>
+                <div class="alert alert-info">
+                  <h5>Please give us some information about yourself</h5>
+                </div>
+              </center>
               <div class="form-group row">
-                <div class="col-sm-1 col-lg-6">
-                  <label for="textFirstName" class="col-md-2 col-form-label">
+                <div class="col-sm-2">
+                  <label for="textFirstName" class="col-md-8 col-form-label">
                     <span>First Name:</span>
                   </label>
                 </div>
-                <div class="col-sm-4 col-lg-6">
+                <div class="col-sm-10 col-md-3">
                   <input type="text" id="textFirstName" name="textFirstName" required class="form-control" placeholder="First Name">
                 </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-sm-1 col-lg-6">
-                  <label for="textLastName" class="col-md-2 col-form-label">
+                
+                <div class="col-sm-2">
+                  <label for="textLastName" class="col-md-8 col-form-label">
                     <span>Last Name:</span>
                   </label>
                 </div>
-                <div class="col-sm-4 col-md-6">
+                <div class="col-sm-10 col-md-3">
                   <input type="text" id="textLastName" name="textLastName" required class="form-control" placeholder="Last Name">
                 </div>
               </div>
 
               <fieldset class="form-group">
-                <div class="row">
+                <div class="row col-sm-2">
                   <legend class="col-sm-1 col-form-label">Gender</legend>
-                  <div class="col-sm-8">
-                    <div class="form-check">
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-8 row">
+                    <div class="form-check col-2">
                       <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
                       <label for="rbMale" class="form-check-label">Male</label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check col-2">
                       <input type="radio" id="rbFemale" name="gender" value="female" class="form-check-input">
                       <label for="rbMale" class="form-check-label">Female</label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check col-2">
                       <input type="radio" id="rbOther" name="gender" value="other" class="form-check-input">
                       <label for="rbOther" class="form-check-label">Other</label>
                     </div>
                   </div>
-                </div> 
+                </div>
               </fieldset>
 
               <div class="row form-group">
-                <div class="col-sm-1 col-lg-6">
+                <div class="col-sm-2">
                   <label for="txtTel" class="col-md-2 col-form-label">
                     <span>Telephone:</span>
                   </label>
                 </div>
-                <div class="col-sm-4 col-md-6">
+                <div class="col-sm-10 col-md-3">
                   <input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{10}" class="form-control" placeholder="3333333333333">
                 </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-sm-1 col-lg-6">
-                  <label for="txtEmail" class=" col-md-2 col-form-label">
+                <div class="col-sm-2">
+                  <label for="txtEmail" class="col-md-2 col-form-label">
                     <span>Email:</span>
                   </label>
                 </div>
-                <div class="col-sm-4 col-md-6">
+                <div class="col-sm-10 col-md-3">
                   <input type="email" id="txtEmail" name="txtEmail" required class="form-control" placeholder="you@domain.com">
                 </div>
               </div>
 
               <div class="row form-group">
-                <div class="col-sm-1 col-lg-6">
+                <div class="col-sm-2">
                   <label for="txtAddress"class =" col-md-2 col-form-label">
                     <span>Address:</span>
                   </label>
@@ -102,18 +100,18 @@
                 <div class="col-sm-2 col-md-1">
                   <input type="text" id="txtCity" name="txtState" class="form-control" placeholder="State">
                 </div>
-                <div class="col-sm-2 col-md-1">
+                <div class="col-sm-2 col-md-2">
                   <input type="text" id="txtZip" name="txtZip" class="form-control" placeholder="ZipCode" pattern="{0-9}[5]">
                 </div>
               </div>
 
               <div class="row form-group">
-                <div class="col-sm-1 col-lg-6">
-                  <label for="txtDOB" class="col-md-2 col-form-label">
+                <div class="col-sm-2">
+                  <label for="txtDOB" class="col-md-12 col-form-label">
                     <span>Date of Birth</span>
                   </label>
                 </div>
-                <div class="col-sm-4 col-md-6">
+                <div class="col-sm-3">
                   <input type="date" id="textDOB" name="txtDOB" required class="form-control" placeholder="Date of Birth">
                 </div>
               </div>
@@ -125,160 +123,146 @@
                 <h5><center>Please select yes if you are experiencing any of these symptoms</center></h5>
               </div>
 
-              <div class ="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddFever" class ="col-sm-2 col-form-label">
-                    Fever or Chills:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddCough" name="ddCough" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddCough" class="col-md-2 col-form-label">
-                    Cough:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddCough" name="ddCough" class = "form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ShortnessOfBreath" class="col-md-2 col-form-label">
-                    Shortness of Breath:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddSOB" name="ddSOB" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddFatigue" class="col-md-2 col-form-label">
-                      Fatigue
-                  </label>
-                </div>
-                <div>
-                  <select id="ddFatigue" name="ddFatigue" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddMuscleorBodyAches" class="col-md-2 col-form-label">
-                    Muscle or Body Aches:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddMuscleorBodyAches" name="ddMuscleorBodyAches" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddHeadaches" class="col-md-2 col-form-label">
-                    Headaches:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddHeadaches" name="ddHeadaches" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddNewLoss" class="col-md-6 col-form-label">
-                    New Loss of Taste or Smell:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddNewLoss" name="ddNewLoss" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddSore" class="col-md-2 col-form-label">
-                    Sore Throat:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddSore" name="ddSore" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
+              <center>
+                <div class ="row form-group">
+                  <div class='col-sm-2'>
+                    <label for="ddFever" class ="col-md-12 col-form-label">
+                      <span>Fever or Chills:</span>
+                    </label>
                   </div>
-              </div>
-              
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddCongestion" class="col-md-2 col-form-label">
-                    Congestion:
-                  </label>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddCough" name="ddCough" class="form-control col-sm-3">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div class='col-sm-2'>
+                    <label for="ddCough" class="col-md-12 col-form-label">
+                      Cough:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddCough" name="ddCough" class = "col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
                 </div>
-                <div>
-                    <select id="ddCongestion" name="ddCongestion" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddNausea" class="col-md-2 col-form-label">
-                    Nausea or Vomiting:
-                  </label>
-                </div>
-                <div>
-                  <select id="ddNausea" name="ddNausea" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </div>
-              </div>  
 
-              <div class="row form-group">
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddDiarrhea" class="col-md-2 col-form-label">
-                    Diarrhea:
-                  </label>
+                <div class="row form-group">
+                  <div class='col-sm-2'>
+                    <label for="ShortnessOfBreath" class="col-md-12 col-form-label">
+                      Shortness of Breath:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddSOB" name="ddSOB" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div class='col-sm-2'>
+                    <label for="ddFatigue" class="col-md-12 col-form-label">
+                        Fatigue
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddFatigue" name="ddFatigue" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
                 </div>
-                <div>
-                  <select id="ddDiarrhea" name="ddDiarrhea" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>                 
-                  </select>
-                </div>
-              </div>
 
+                <div class="row form-group">
+                  <div class='col-sm-2'>
+                    <label for="ddMuscleorBodyAches" class="col-md-12 col-form-label">
+                      Muscle or Body Aches:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddMuscleorBodyAches" name="ddMuscleorBodyAches" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div class='col-sm-2'>
+                    <label for="ddHeadaches" class="col-md-12 col-form-label">
+                      Headaches:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddHeadaches" name="ddHeadaches" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class='col-sm-2'>
+                    <label for="ddNewLoss" class="col-md-12 col-form-label">
+                      New Loss of Taste or Smell:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddNewLoss" name="ddNewLoss" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div class='col-sm-2'>
+                    <label for="ddSore" class="col-md-12 col-form-label">
+                      Sore Throat:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddSore" name="ddSore" class="form-control col-sm-3">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                    </div>
+                </div>
+                
+                <div class="row form-group">
+                  <div class='col-sm-2'>
+                    <label for="ddCongestion" class="col-sm-12 col-form-label">
+                      Congestion:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                      <select id="ddCongestion" name="ddCongestion" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                  <div class='col-sm-2'>
+                    <label for="ddNausea" class="col-md-12 col-form-label">
+                      Nausea or Vomiting:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddNausea" name="ddNausea" class="col-sm-3 form-control">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                </div>  
+
+                <div class="row form-group">
+                  <div class='col-sm-2 col-md-6'>
+                    <label for="ddDiarrhea" class="col-md-12 col-form-label">
+                      Diarrhea:
+                    </label>
+                  </div>
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddDiarrhea" name="ddDiarrhea" class="form-control col-sm-3">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>                 
+                    </select>
+                  </div>
+                </div>
+              </center>
             </fieldset>
 
             <fieldset>
@@ -286,58 +270,59 @@
               <div class="alert alert-info">
                 <h5><center>Please fill out some more information for our records.</center></h5>
               </div>
-
-              <div class='row form-group'>
-                <div class='col-sm-2 col-md-6'>
-                  <label for="ddContact" class="col-md-6 col-form-label">
-                  Have you had contact within 6 feet for greater than 15 minutes, or caring for someone who is diagnosed with COVID-19 in the last 14 days and were not wearing proper personal protection?
-                  </label>
-                </div>
-                <div class="col-sm-2 col-md-6">
-                  <select id="ddContact" name="ddContact" class="form-control">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>                 
-                  </select>
-                </div>
-              </div>
-
-              <fieldset>
-                <div class="row form-group">
+              <center>
+                <div class='row form-group'>
                   <div class='col-sm-2 col-md-6'>
-                    <label for="ddCountry" class="col-md-6 col-form-label" onchange="updateCountryView()">
-                      Have you traveled to another country in the past 14 days?
+                    <label for="ddContact" class="col-md-12 col-form-label">
+                    Have you had contact within 6 feet for greater than 15 minutes, or caring for someone who is diagnosed with COVID-19 in the last 14 days and were not wearing proper personal protection?
                     </label>
                   </div>
-                  <div class="col-sm-2 col-md-6 ">
-                    <select id="ddCountry" name="ddCountry" class="form-control">
+                  <div class="col-sm-10 col-md-4">
+                    <select id="ddContact" name="ddContact" class="form-control col-sm-3">
                       <option value="No">No</option>
                       <option value="Yes">Yes</option>                 
                     </select>
                   </div>
                 </div>
 
-                <div class="row form-group invisible">
-                  <div class='col-sm-2 col-md-6'>
-                    <label for="txtWhichCountry" class="col-md-6 col-form-label">
-                      If so which countries? (seperate with commas)
+                <fieldset>
+                  <div class="row form-group">
+                    <div class='col-sm-2 col-md-6'>
+                      <label for="ddCountry" class="col-md-10 col-form-label" onchange="updateCountryView()">
+                        Have you traveled to another country in the past 14 days?
+                      </label>
+                    </div>
+                    <div class="col-sm-10 col-md-4">
+                      <select id="ddCountry" name="ddCountry" class="form-control col-sm-3">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>                 
+                      </select>
+                    </div>
+                  </div>
+
+                  <div id="divCountry"class="row form-group invisible">
+                    <div class='col-sm-6 col-md-6'>
+                      <label for="txtWhichCountry" class="col-md-6 col-form-label">
+                        If so which countries? (seperate with commas)
+                      </label>
+                    </div>
+                    <div>
+                      <input type="text" id="txtWhichCountry" name="txtWhichCountry" required class="form-control" placeholder="countries">
+                    </div>
+                  </div>  
+                </fieldset>
+
+                <div class="row form-group">
+                  <div class="col-sm-2 col-md-6">
+                    <label for="temp" class="col-md-6 col-form-label">
+                      Current temperature:
                     </label>
                   </div>
-                  <div class="col-sm-2 col-md-6">
-                    <input type="text" id="txtCountry" name="txtCountry" required class="form-control" placeholder="countries">
+                  <div>
+                    <input type="text" name="txtTemp" id="txtTemp" class="form-control col-sm-6" required pattern="[0-9]+[0-9]+\.[0-9]|[0-9]+[0-9]+\.[0-9][0-9][0-9]+[0-9]+\.[0-9]" placeholder="98.7">
                   </div>
-                </div>  
-              </fieldset>
-
-              <div class="row form-group">
-                <div class="col-sm-2 col-md-6">
-                  <label for="temp" class="col-md-6 col-form-label">
-                    Current temperature:
-                  </label>
                 </div>
-                <div class="col-sm-2 col-md-6">
-                  <input type="text" name="txtTemp" id="txtTemp" class="form-control" required pattern="[0-9]+[0-9]+\.[0-9]|[0-9]+[0-9]+\.[0-9][0-9][0-9]+[0-9]+\.[0-9]" placeholder="98.7">
-                </div>
-              </div>
+              </center>
               <center>
                 <button type="submit" name="SubmitButton" class="btn btn-primary">Submit</button>
                 <button type="reset" name="ResetButton"class="btn btn-secondary">Reset</button>
@@ -349,7 +334,7 @@
       </section>
       <footer>
         <center>Copyright g2021 Covid Center Website</center>
-      
       </footer>
+      <script src="js/script.js"></script>
   </body>
 </html>
