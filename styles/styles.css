@@ -4,6 +4,9 @@
 .hasError{
     color: red;
 }
-.hasError{
-    background-color: yellow;
+.errorMessage{
+    background-color:tomato;
+    text-align: center;
+    border-radius:12pt;
+    
 }
